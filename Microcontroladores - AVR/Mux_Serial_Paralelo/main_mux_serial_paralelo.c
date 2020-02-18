@@ -19,7 +19,7 @@ int main(void)
 	DDRD = 0b11111110;	// PB0 como pino de entrada, os demais pinos como saída
 	PORTD= 0x01;		// habilita o pull-up do PB0
 
-	mux_num(0);			// deixa em 00 os displays
+	mux_num(0);		// deixa em 00 os displays
 
 	button(0);			// faz a leitura do botão
 
