@@ -1,5 +1,7 @@
-# Projeto de Cofre para a matÈria de eletrÙnica digital 2, feito com o uso de m·quina de estados, utilizando portas lÛgicas e circuitos integrados simples.
+# Projeto de Cofre para a mat√©ria de eletr√¥nica digital 2
 
-# AplicaÁ„o em Proteus para simulaÁ„o e em Quartus para uso em FPGA.
+Feito com o uso de m√°quina de estados, utilizando portas l√≥gicas e circuitos integrados simples.
 
-# Com o clock sendo feito, e o sinal dado, a senha com 3 dÌgitos pode ser mudada ao inserir 000 e pressionar o bot„o de trocar a senha. Apos isso, uma nova senha pode ser inserida.
+Aplica√ß√£o em Proteus para simula√ß√£o e em Quartus para uso em FPGA.
+
+Com o clock sendo feito, e o sinal dado, a senha com 3 d√≠gitos pode ser mudada ao inserir 000 e pressionar o bot√£o de trocar a senha. Apos isso, uma nova senha pode ser inserida.
