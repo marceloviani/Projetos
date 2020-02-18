@@ -54,9 +54,8 @@ Funciona emitindo ondas sonoras ciclicas que ao colidir com um objeto vai retorn
 Vai dar uma onda quadrada de frequencia diretamente proporcional a intensidade de luz. O sensor deve estar o mais próximo possível e com a menor variação possível de iluminação, pois ele é extremamente sensível a luz ambiente, por isso foi colocado um pedaço de papelão para envolver o sensor, possibilitando assim medidas mais precisas.
 
 
-
-## ReferÃªncias bibliogrÃ¡ficas
-CÃ³digo para MLX90614 https://github.com/adafruit/Adafruit-MLX90614-Library
-CÃ³digo para JSN-SR04T https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home
-Leitor de cÃ³digo de barras https://github.com/ZBar/ZBar
-As fÃ³rmulas para o cÃ¡lculo do volume utilizadas foram providas pela equipe do Otavio e do Thiago https://github.com/LPAE/pi2_eng_19_1/blob/master/Otavio_Freire_Thiago_Lira/Documento_T%C3%A9cnico_Otavio_Thiago.md
+## Referências bibliográficas
+Código para MLX90614 https://github.com/adafruit/Adafruit-MLX90614-Library
+Código para JSN-SR04T https://bitbucket.org/teckel12/arduino-new-ping/wiki/Home
+Leitor de código de barras https://github.com/ZBar/ZBar
+As fórmulas para o cálculo do volume utilizadas foram providas pela equipe do Otavio e do Thiago https://github.com/LPAE/pi2_eng_19_1/blob/master/Otavio_Freire_Thiago_Lira/Documento_T%C3%A9cnico_Otavio_Thiago.md
