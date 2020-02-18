@@ -1,0 +1,92 @@
+TOPO:
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity Topo is
+port (SW: in std_logic_vector(17 downto 0);
+		KEY: in std_logic_vector(3 downto 0);
+		CLOCK_50: in std_logic;
+		HEX0: out std_logic_vector(6 downto 0);
+		LEDR: out std_logic_vector(17 downto 0));
+end Topo;
+
+architecture Comportamento of Topo is
+
+Component RegPP4bits is
+port (D: in std_logic_vector(3 downto 0);
+		EN: in std_logic;
+		CLEAR: in std_logic;
+		CLK: in std_logic;
+		Q: out std_logic_vector(3 downto 0));
+end component;
+
+component comparador4bits is
+Port(A0: in std_logic_vector(3 downto 0);
+	  B0: in std_logic_vector(3 downto 0);
+	  Q: out std_logic);
+end component;
+
+
+end Comportamento;
+
+
+
+
+REGISTRADOR 4 BITS:
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity RegPP4bits is
+
+port (D: in std_logic_vector(3 downto 0);
+		EN: in std_logic;
+		CLEAR: in std_logic;
+		CLK: in std_logic;
+		Q: out std_logic_vector(3 downto 0));
+end RegPP4bits;
+
+architecture Comportamento of RegPP4bits is
+
+Begin
+
+	Process(CLK)
+	Begin
+		IF (CLEAR='1') THEN
+			Q <= "0000";
+		ELSIF (CLK'EVENT AND CLK='1' AND EN ='1') THEN
+			Q <= D;
+		END IF;
+		
+	END Process;
+	
+end Comportamento;
+
+
+
+
+
+COMPARADOR 4 BITS:
+
+Library ieee;
+Use ieee.std_logic_1164.all;
+
+Entity comparador4bits is
+
+Port(A0: in std_logic_vector(3 downto 0);
+	  B0: in std_logic_vector(3 downto 0);
+	  Q: out std_logic);
+End comparador4bits;
+
+ARCHITECTURE Comportamento OF comparador4bits IS
+
+BEGIN
+
+	IF (A0 = B0) THEN
+		Q <= "1";
+	ELSE
+		Q <= "0";
+	END IF;
+
+END Comportamento;
