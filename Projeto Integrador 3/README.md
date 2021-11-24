@@ -34,8 +34,8 @@ Escolha: ATmega2560 pela disponibilidade, facilidade no uso e por cumprir as nec
 #### 4° Etapa - Exibição de forma gráfica
 
 
-### IMPLEMENTAÇÃO
 
+### IMPLEMENTAÇÃO
 
 #### ATmega2560 - Microcontrolador
 É um sensor composto por um emissor e um fototransistor. Quando algum objeto é colocado em frente sensor, o sinal infravermelho é refletido para o fototransistor. Quando isso acontece a saída vai para nível lógico baixo, sendo possível assim controlar os outros sensores utilizando o sinal recebido pelo TRCT5000.
