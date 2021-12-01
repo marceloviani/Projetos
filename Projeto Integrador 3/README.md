@@ -13,32 +13,55 @@ Assim, foi passado para a área da eletrônica, que fizesse um sistema de teleme
 
 Esses dados como, velocidade, temperatura do motor e das baterias, rotação do motor, posição do acelerador, do freio e do volante, força G e tensão das baterias, devem então ser lidos por um microcontrolador, armazenados, transmitidos e apresentados em uma interface gráfica.
 
+Este trabalho tem o objetivo de formar uma estrutura que realize a transmissão dos dados necessários, a uma distância mínima de 200m e máxima de 1km. Que evite a perda de dados durante a transmissão, havendo uma forma de identificar possíveis perdas ou o recebimento de dados errados. E que tenha um baixo consumo energético.
 
 
 ### CONCEPÇÃO
-A concepção é a etapa do projeto em que serão conhecidos os requisitos do projeto e propostas as soluções para atender os requisitos exigidos.
+A concepção é a etapa do projeto em que serão conhecidos os requisitos do projeto e propostas as soluções para atender aos requisitos exigidos.
 
 #### 1° Etapa - Medição de dados
 
-Necessidades: Aquisição de dados a cada 10ms, confiabilidade, baixo consumo, facilidade de implementação.
+Necessidades: Aquisição de dados a cada 10ms, confiabilidade, baixo consumo, facilidade de implementação e portabilidade.
 
-Opções: Controladores Atmel, ST, ESP, Microchip, MSP.
+Opções: Controladores Atmel, ST, ESP, Microchip ou MSP.
 
 Escolha: ATmega2560 pela disponibilidade, facilidade no uso e por cumprir as necessidades apresentadas.
 
 
-#### 2° Etapa - Gravar os dados
+#### 2° Etapa - Gravar dados
+
+Necessidades: Recebimento de dados, espaço de armazenamento, dimensões pequenas e compatibilidade com o sistema de medição.
+
+Opções: Módulo de Cartão SD e Cartão SD ou Módulo de Cartão Micro SD e Cartão Micro SD.
+
+Escolha: Módulo de Cartão SD e Cartão de memória SD.
+
 
 #### 3° Etapa - Transmissão
 
+Necessidades: Transmissão e recebimento de dados, entre 200m e 2Km, dimensões pequenas, compatibilidade com o sistema de medição, baixo consumo de energia, confiabilidade, facilidade de implementação.
+
+Opções: NRF24L01 Wireless, RF Wireless LoRa, RF 433MHz AM, Bluetooth RS232 HC-05, ZigBee/XBee, WiFi ESP ou GSM SIM808.
+
+Escolha: Módulo Xbee PRO S2C, devido a disponibilidade, cumprimento dos requisitos e pela vasta documentação obtida em pesquisas.
+
 #### 4° Etapa - Exibição de forma gráfica
+
+Necessidades: Recebimento de dados e atualização instantânea de gráficos a partir deles.
+
+Opções:
+
+Escolha:
 
 
 
 ### IMPLEMENTAÇÃO
 
-#### ATmega2560 - Microcontrolador
+#### ATmega2560 - Medição de dados
 
+#### Módulo de Cartão SD - Gravar dados
+
+#### Xbee - Transmissão
 
 
 ## Referências bibliográficas
