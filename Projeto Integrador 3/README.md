@@ -15,7 +15,8 @@ Assim, foi passado para a área da eletrônica, que fizesse um sistema de teleme
 
 Esses dados como, velocidade, temperatura do motor e das baterias, rotação do motor, posição do acelerador, do freio e do volante, força G e tensão das baterias, devem então ser lidos por um microcontrolador, armazenados, transmitidos e apresentados em uma interface gráfica.
 
-Este trabalho tem o objetivo de formar uma estrutura que realize a transmissão dos dados necessários, a uma distância mínima de 200m e máxima de 1km. Que evite a perda de dados durante a transmissão, havendo uma forma de identificar possíveis perdas ou o recebimento de dados errados. E que tenha um baixo consumo energético.
+Este trabalho tem o objetivo de formar uma estrutura que realize a transmissão dos dados necessários, a uma distância mínima de 1m e máxima de 500m. Que evite a perda de dados durante a transmissão, havendo uma forma de identificar possíveis perdas ou o recebimento de dados errados. E que tenha um baixo consumo energético.
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/Autodromo.png?raw=true)
 <p> <br />
 </p>
 
@@ -82,16 +83,28 @@ O XBee utiliza as especificações de ZigBee para a comunicação entre si, que 
 
 No software XCTU, os XBees foram configurados, dando um mesmo nome para a rede (ID) dos dois, com um sendo configurado como coordenador (CE = 1) e outro como roteador (CE = 0), para que realizem a comunicação direta entre os dois. Cada módulo possui um endereço próprio, sendo configurado em um o endereço (DH e DL) do outro. Por último, foi dado um nome (NI) diferente para cada um dos dois XBees. Também é possível realizar outras configurações de acordo com as necessidades que se tem, como por exemplo a mudança na taxa de transmissão serial, criptografia, modo de hibernação e potência de transmissão, mas que para os testes feitos foram deixados nas configurações padrão.
 
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/ConfigXCTU.png?raw=true)
+
 Com os módulos configurados, ao estarem energizados a rede é criada entre eles e eles iniciam a comunicação, que ocorre com o envio via transmissão serial entre Tx e Rx.
+
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/ForcaSinal.png?raw=true)
+
 
 O XCTU disponibiliza uma ferramenta para o teste de distância transmissão de dados, que envia e recebe pacotes de dados, mostrando a quantidade de pacotes que foram recebidos corretamente, quantos foram perdidos e a força do sinal.  Em testes realizados em ambiente urbano, foi obtida uma taxa de recebimento correto entre 78% e 86%, até que em cerca de 140 metros de distância o sinal foi perdido, devido a construções que haviam entre o transmissor e o receptor. Os dados foram inseridos em uma tabela, removendo os 37 primeiros pacotes, pois o teste começou a partir do pacote 38. Foi realizado mais um teste, em um local próximo, desta vez a 350 metros de distância, onde os dois XBees conseguiram realizar a conexão e trocar corretamente 4 pacotes, de 37 enviados.
 
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/Teste1max.png?raw=true)
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/testerange1.gif?raw=true)
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/TabelaDados.png?raw=true)
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/Teste2max.png?raw=true)
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/TesteDistancia2.jpg?raw=true)
 
 #### Exibição de forma gráfica
 
 A exibição gráfica foi feita a partir da ferramenta Plotter Serial, encontrada no software IDE Arduino. Onde é selecionada a porta COM onde o XBee é alocado no computador e com os dados recebidos via serial é feito um gráfico em tempo real dos dados recebidos pelo tempo atual.
 
 Com os dados recebidos de forma serial, o projeto é facilmente escalonável para que seja feito um software que receba os dados e exiba em uma interface gráfica própria, para se ter melhor aproveitamento dos dados colhidos.
+
+![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/PlotDados.png?raw=true)
 
 
 #### Gravar dados
