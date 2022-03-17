@@ -74,10 +74,13 @@ O programa feito para testes realiza a leitura de um sensor ultrassônico, simul
 
 Após realizar as medidas e conversões, os dados são escritos de forma serial, para que sejam transmitidos pelo módulo de transmissão. A leitura é feita em uma taxa de 10kHz, onde é possível se obter uma boa visualização das mudanças nas medições e ao mesmo tempo realizar as aquisições e cálculos dos dados.
 
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/transmissor.jpg?raw=true)
 
 #### Transmissão
 
 Para a transmissão e recepção foram utilizados dois módulos XBee PRO S2C, juntamente com um Shield para conectar ao Arduino que ficará embarcado ao Veiculo SAE e um adaptador Explorer USB, para a conexão do XBee ao computador que receberá os dados.
+
+ ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/receptor.jpeg?raw=true)
 
 O XBee utiliza as especificações de ZigBee para a comunicação entre si, que seguem a norma IEEE 802.15.4. Esse padrão visa o baixo consumo, sendo ideal para implementações em sistemas embarcados. O módulo conta com um software próprio, que facilita a configuração dos XBees.
 
@@ -109,6 +112,9 @@ Com os dados recebidos de forma serial, o projeto é facilmente escalonável par
 
 #### Gravar dados
 Os dados foram armazenados através do monitor serial que o XCTU possui, onde se tem a possibilidade de armazenar os dados recebidos em um arquivo com a terminação .log que pode ser lido por ele ou aberto como texto, onde são armazenados os dados recebidos de forma hexadecimal e a data e horário em que foram recebidos.
+
+![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/serialXCTU.jpeg?raw=true)
+
 Assim como foi relatado da parte gráfica, os dados armazenados após o recebimento também podem ser gravados da maneira que seja preferida ao se fazer um software próprio.
 
 Outro ponto visto é que os dados foram armazenados após o recebimento, porém é mais indicado, caso seja possível, realizar o armazenamento de forma embarcada no veículo, assim, evitando que sejam perdidos dados durante a transmissão.
