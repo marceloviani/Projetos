@@ -93,11 +93,14 @@ Com os módulos configurados, ao estarem energizados a rede é criada entre eles
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/ForcaSinal.png?raw=true)
 
 
-O XCTU disponibiliza uma ferramenta para o teste de distância transmissão de dados, que envia e recebe pacotes de dados, mostrando a quantidade de pacotes que foram recebidos corretamente, quantos foram perdidos e a força do sinal.  Em testes realizados em ambiente urbano, foi obtida uma taxa de recebimento correto entre 78% e 86%, até que em cerca de 140 metros de distância o sinal foi perdido, devido a construções que haviam entre o transmissor e o receptor. Os dados foram inseridos em uma tabela, removendo os 37 primeiros pacotes, pois o teste começou a partir do pacote 38. Foi realizado mais um teste, em um local próximo, desta vez a 350 metros de distância, onde os dois XBees conseguiram realizar a conexão e trocar corretamente 4 pacotes, de 37 enviados.
+O XCTU disponibiliza uma ferramenta para o teste de distância transmissão de dados, que envia e recebe pacotes de dados, mostrando a quantidade de pacotes que foram recebidos corretamente, quantos foram perdidos e a força do sinal.  Em testes realizados em ambiente urbano, foi obtida uma taxa de recebimento correto entre 78% e 86%, até que em cerca de 140 metros de distância o sinal foi perdido, devido a construções que haviam entre o transmissor e o receptor. Os dados foram inseridos em uma tabela, removendo os 37 primeiros pacotes, pois o teste começou a partir do pacote 38.
 
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/Teste1max.png?raw=true)
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/testerange1.gif?raw=true)
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/TabelaDados.png?raw=true)
+ 
+ Foi realizado mais um teste, em um local próximo, desta vez a 350 metros de distância, onde os dois XBees conseguiram realizar a conexão e trocar corretamente 4 pacotes, de 37 enviados.
+ 
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/Teste2max.png?raw=true)
  ![](https://github.com/marceloviani/Projetos/blob/master/Projeto%20Integrador%203/Images/TesteDistancia2.jpg?raw=true)
 
