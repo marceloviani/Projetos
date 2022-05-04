@@ -1,5 +1,24 @@
-## Robo Aspirador de Pó
+# Robo Aspirador de Pó
 
+- Instituto Federal da Santa Catarina - Câmpus Florianópolis
+- Nomes: Marcelo Viani e Matheus Rodrigues da Cunha
+- Curso: Engenharia Eletrôncia
+- Unidade Curricular: Projeto Integrador 3
+
+### Conteudo:
+
+-[Concepção do Projeto](#Concepção do Projeto)
+
+## Concepção do Projeto
+
+
+  Preços | Valor Exemplo
+  -------|-------
+  dado 1 | Dados
+         |
+         |
+         |
+         |
 
 Necessidades:
 
@@ -18,13 +37,11 @@ Necessidades:
 1 Base/Case:
 - Utilizar a base em acrilico já existente
 - Produzir uma
-- Base x Case
-|            |
-|            |
-|            |
-|            |
-|            |
-|            |
+-   Base x Case
+
+
+
+        
 2 Aspirar
 - Utilizar aspirador de 12V
 - Fazer um aspirador a partir de um motor DC
@@ -53,6 +70,7 @@ Necessidades:
 - Sensor Ultrassonico
 - Sensor infravermelho
 - Câmera
+- Sensor de Velocidade
 
 
 8 Conhecer ponto de partida
