@@ -18,7 +18,13 @@ Necessidades:
 1 Base/Case:
 - Utilizar a base em acrilico já existente
 - Produzir uma
-
+- Base x Case
+|            |
+|            |
+|            |
+|            |
+|            |
+|            |
 2 Aspirar
 - Utilizar aspirador de 12V
 - Fazer um aspirador a partir de um motor DC
@@ -28,9 +34,9 @@ Necessidades:
 - Necessário saber tensão necessária e corrente consumida
 
 4 Movimentação
-- Motores DC
+- Motores DC 
+- 
 - Motores de Passo
-- Rodas
 
 5 Evitar batidas
 - Parte Móvel que funcione como um botão e amortecedor de impactos
