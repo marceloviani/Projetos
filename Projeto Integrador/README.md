@@ -120,5 +120,5 @@ Necessidades:
 ## Referência e Bibliografia:
 
 
-
-https://www.tecmundo.com.br/produto/207430-aspiradores-robo-tiveram-aumento-vendas-372-em-2020.htm
+- https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
+- https://www.tecmundo.com.br/produto/207430-aspiradores-robo-tiveram-aumento-vendas-372-em-2020.htm
