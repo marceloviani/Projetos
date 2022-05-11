@@ -5,6 +5,25 @@
 - Curso: Engenharia Eletrôncia
 - Unidade Curricular: Projeto Integrador 3
 
+
+### INTRODUÇÃO
+
+Um dos aparelhos eletrônicos que tem sido destaque nos ultimos anos é o aspirador que limpa os locais sem a necessidade 
+de estar sendo manuseado por uma pessoa durante o seu funcionamento. Este dispositivo é conhecido como robô aspirador,
+e tem em comum em todas os modelos se movimentar em um ambiente de forma autonoma, evitar ficar preso e ter baixa altura.
+
+A maioria de menor custo possue um sistema que anda de forma aleatória, podendo ou não realizar uma boa limpeza e uma 
+baixa autonomia. Já os mais avançados, começam a ter funções como poder programar o horário de funcionamento, avisar 
+quando a bateria estiver acabando, ter uma maior autonomia, voltar de forma autonoma para a base de carregamento, 
+realizar o mapeamento completo do ambiente e diversas outras funções que os fabricantes projetam.
+
+Nossa proposta para a disciplina de projeto integrador III é montar um protótipo de robô aspirador, que possua todas as
+funções básicas vistas nesses dispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar 
+quando a bateria estiver em nível baixo e evitar quedas e batidas. E realizar algumas atividades mais avançadas, sendo 
+a principal o desenvolvimento de um software que consiga realizar um mapeamento do ambiente ou que o robô trace uma 
+rota de forma a passar o aspirador em toda a área do local onde ele for colocado.
+
+
 ### Conteudo:
 
 - [Concepção do Projeto](#Concepção do Projeto)
