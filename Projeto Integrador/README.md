@@ -29,6 +29,11 @@ A idea do projeto é montar um robô aspirador
  Leds |
  LCD | Display LCD 16x2
  Fonte | 
+ Módulo Sensor de bluetooth 
+ 
+ ## Características do Projeto:
+ 
+ 
     
         
 Necessidades:
