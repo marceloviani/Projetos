@@ -10,21 +10,27 @@
 - [Concepção do Projeto](#Concepção do Projeto)
 
 ## Concepção do Projeto
-
-
+A idea do projeto é construir um robo aspirador que possa limpar uma sala. Esse 
 ## Introdução:
 
 A idea do projeto é montar um robô aspirador 
 
 
-  Preços | Valor Exemplo
-  -------|-------
-  dado 1 | Dados
-         |
-         |
-         |
-         |
-
+  Materias | Tipo Exemplo  | Custos      |
+  -------  |-------------- | ----------- |
+ Microcontrolador |                      | R$14,16
+ GPS |
+ Sensor LIDAR |
+ Sensor Ultrassonico | Smart Sensor Ultrassônico Hc-sr04
+ Sensor infravermelho | Módulo Sensor de Obstáculo Infravermelho IR
+ Câmera |
+ Sensor de Velocidade | Módulo Sensor de Velocidade Encoder
+ Motores DC |
+ Leds |
+ LCD | Display LCD 16x2
+ Fonte | 
+    
+        
 Necessidades:
 
 - 1 Base/Case
@@ -41,12 +47,7 @@ Necessidades:
 
 1 Base/Case:
 - Utilizar a base em acrilico já existente
-- Produzir uma
--   Base x Case
-
-
-
-        
+      
 2 Aspirar
 - Utilizar aspirador de 12V
 - Fazer um aspirador a partir de um motor DC
