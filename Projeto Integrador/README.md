@@ -75,9 +75,12 @@ Necessidades:
 - Utilizar a base em acrilico já existente
       
 2 Aspirar
-- Utilizar aspirador de 12V
-- Fazer um aspirador a partir de um motor DC
-- Utilizar escovas e motores para empurrar a sujeira até um reservatório
+
+Forma de Aspirar                                                        | Valor       | Dificuldade | Link
+:---------------------------------------------------------------------: | :------:    | :----------:| :----------------------:
+Utilizar aspirador de 12V                                               | R$ 55,00    | Menor       | https://www.ifsc.edu.br/
+Fazer um aspirador a partir de um motor DC                              | R$ 20,00    | Média       | https://www.ifsc.edu.br/
+Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 30,00    | Média       | https://www.ifsc.edu.br/
 
 3 Bateria
 - Necessário saber tensão necessária e corrente consumida
