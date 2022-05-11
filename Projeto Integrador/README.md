@@ -33,8 +33,10 @@ A idea do projeto é montar um robô aspirador
  
  ## Características do Projeto:
  
+ ![Screenshot](https://camo.githubusercontent.com/37648960f68d08493e41f3fcc5146b1b937f7c9ef2aada56c4b2bb4528fb5139/68747470733a2f2f692e6962622e636f2f796e787a3664532f494d472d32303139303632362d3135343832312e6a7067)
  
-    
+ ![Screenshot](https://s2.glbimg.com/KyoOd8SuhrHEAtqUq6Upr2UmpKA=/0x0:1280x720/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/J/c/3ttmiFQQS4N4WJhZd1tw/robo-aspirador-de-po-vale-a-pena2.png)
+ 
         
 Necessidades:
 
@@ -95,3 +97,5 @@ Necessidades:
 - Botões
 - Leds
 - LCD
+
+## Referência e Bibliografia:
