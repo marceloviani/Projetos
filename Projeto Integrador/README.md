@@ -125,3 +125,4 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 
 - https://cdn.sparkfun.com/datasheets/Sensors/Proximity/HCSR04.pdf
 - https://www.tecmundo.com.br/produto/207430-aspiradores-robo-tiveram-aumento-vendas-372-em-2020.htm
+- https://www.teses.usp.br/teses/disponiveis/3/3139/tde-17012022-100444/fr.php
