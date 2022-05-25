@@ -39,7 +39,7 @@ A idea do projeto é montar um robô aspirador
   -------  |-------------- | ----------- |
  Microcontrolador |                      | R$14,16
  STM32f103c8t6 |
- Sensor Ultrassonico | Smart Sensor Ultrassônico Hc-sr04
+ Sensor Ultrassonico  |  Smart Sensor Ultrassônico Hc-sr04
  Sensor infravermelho | Módulo Sensor de Obstáculo Infravermelho IR
  Sensor de Velocidade | Módulo Sensor de Velocidade Encoder
  Motores DC |
@@ -88,15 +88,14 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 
 5 Evitar batidas
 - Parte Móvel que funcione como um botão e amortecedor de impactos
-- Sensor Ultrassonico
+- Sensor Ultrassônico
 - Sensor infravermelho
-- Câmera
 
 6 Evitar quedas
 - Sensor infravermelho
 
 7 Registrar Movimentação
-- Sensor Ultrassonico
+- Sensor Ultrassônico
 - Sensor infravermelho
 - Sensor de Velocidade
 
