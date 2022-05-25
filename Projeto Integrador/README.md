@@ -38,15 +38,12 @@ A idea do projeto é montar um robô aspirador
   Materias | Tipo Exemplo  | Custos      |
   -------  |-------------- | ----------- |
  Microcontrolador |                      | R$14,16
- GPS |
- Sensor LIDAR |
+ STM32f103c8t6 |
  Sensor Ultrassonico | Smart Sensor Ultrassônico Hc-sr04
  Sensor infravermelho | Módulo Sensor de Obstáculo Infravermelho IR
- Câmera |
  Sensor de Velocidade | Módulo Sensor de Velocidade Encoder
  Motores DC |
  Leds |
- LCD | Display LCD 16x2
  Fonte | 
  Módulo Sensor de bluetooth 
  
@@ -62,13 +59,12 @@ Necessidades:
 - 1 Base/Case
 - 2 Aspirar
 - 3 Bateria
-- 4 Movimentação
 - 5 Evitar batidas
 - 6 Evitar quedas
 - 7 Registrar Movimentação
 - 8 Conhecer ponto de partida
 - 9 Base para Carregar
-- 10 Agendar Limpeza
+
 
 
 1 Base/Case:
@@ -100,25 +96,12 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 - Sensor infravermelho
 
 7 Registrar Movimentação
-- GPS
-- Sensor LIDAR
 - Sensor Ultrassonico
 - Sensor infravermelho
-- Câmera
 - Sensor de Velocidade
-
-
-8 Conhecer ponto de partida
-- GPS
-- Comunicação a Distância  (verificar intencidade do sinal)
 
 9 Base para Carregar
 - Fonte com Conector que o robo consiga encaixar
-
-10 Agendar Limpeza
-- Botões
-- Leds
-- LCD
 
 ## Referência e Bibliografia:
 
