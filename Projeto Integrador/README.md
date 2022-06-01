@@ -12,24 +12,20 @@ Um dos aparelhos eletrônicos que tem sido destaque nos ultimos anos é o aspira
 de estar sendo manuseado por uma pessoa durante o seu funcionamento. Este dispositivo é conhecido como robô aspirador,
 e tem em comum em todas os modelos se movimentar em um ambiente de forma autonoma, evitar ficar preso e ter baixa altura.
 
-A maioria de menor custo possue um sistema que anda de forma aleatória, podendo ou não realizar uma boa limpeza e uma 
+A maioria de menor custo possui um sistema que anda de forma aleatória, podendo ou não realizar uma boa limpeza com uma 
 baixa autonomia. Já os mais avançados, começam a ter funções como poder programar o horário de funcionamento, avisar 
-quando a bateria estiver acabando, ter uma maior autonomia, voltar de forma autonoma para a base de carregamento, 
-realizar o mapeamento completo do ambiente e diversas outras funções que os fabricantes projetam.
+quando a bateria estiver acabando, voltar de forma autonoma para a base de carregamento e realizar o mapeamento 
+completo do ambiente e diversas outras funções que os fabricantes projetam.
 
-Nossa proposta para a disciplina de projeto integrador III é montar um protótipo de robô aspirador, que possua todas as
-funções básicas vistas nesses dispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar 
-quando a bateria estiver em nível baixo e evitar quedas e batidas. E realizar algumas atividades mais avançadas, sendo 
-a principal o desenvolvimento de um software que consiga realizar um mapeamento do ambiente ou que o robô trace uma 
+Nossa proposta  é montar um protótipo de robô aspirador, que possua todas as funções básicas vistas nesses d
+ispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar quando a bateria estiver 
+em nível baixo e evitar quedas e batidas. E realizar algumas atividades mais avançadas, sendo a principal o 
+desenvolvimento de um software que consiga realizar um mapeamento do ambiente ou que o robô trace uma 
 rota de forma a passar o aspirador em toda a área do local onde ele for colocado.
 
 
 ### Conteudo:
 
-
-
-## Concepção do Projeto
-A idea do projeto é construir um robo aspirador que possa limpar uma sala. Esse 
 ## Introdução:
 
 A idea do projeto é montar um robô aspirador 
@@ -63,12 +59,7 @@ Necessidades:
 - 6 Evitar quedas
 - 7 Registrar Movimentação
 - 8 Conhecer ponto de partida
-- 9 Base para Carregar
 
-
-
-1 Base/Case:
-- Utilizar a base em acrilico já existente
       
 2 Aspirar
 
@@ -81,13 +72,7 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 3 Bateria
 - Necessário saber tensão necessária e corrente consumida
 
-4 Movimentação
-- Motores DC 
-- 
-- Motores de Passo
-
 5 Evitar batidas
-- Parte Móvel que funcione como um botão e amortecedor de impactos
 - Sensor Ultrassônico
 - Sensor infravermelho
 
@@ -98,9 +83,6 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 - Sensor Ultrassônico
 - Sensor infravermelho
 - Sensor de Velocidade
-
-9 Base para Carregar
-- Fonte com Conector que o robo consiga encaixar
 
 ## Referência e Bibliografia:
 
