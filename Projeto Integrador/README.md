@@ -34,7 +34,7 @@ A idea do projeto é montar um robô aspirador
   Materias | Tipo Exemplo  | Custos      |
   -------  |-------------- | ----------- |
  Microcontrolador |                      | R$14,16
- STM32f103c8t6 |
+ ATMEGA328P |
  Sensor Ultrassonico  |  Smart Sensor Ultrassônico Hc-sr04
  Sensor infravermelho | Módulo Sensor de Obstáculo Infravermelho IR
  Sensor de Velocidade | Módulo Sensor de Velocidade Encoder
