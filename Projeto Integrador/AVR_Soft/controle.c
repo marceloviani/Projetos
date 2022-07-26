@@ -23,8 +23,6 @@ volatile uint16_t counter = 0;		// Cria variavel para contador do Encoder 1
 volatile uint16_t counterB = 0;		// Cria variavel para contador do Encoder 2
 volatile uint16_t voltaA = 0;		// Cria variavel para contar volta do Encoder 1
 volatile uint16_t voltaB = 0;		// Cria variavel para contar volta do Encoder 2
-volatile uint16_t voltaA_ant = -1;		// Cria variavel para gravar volta do Encoder 1
-volatile uint16_t voltaB_ant = -1;		// Cria variavel para gravar volta do Encoder 2
 
 
 /* Configura variaveis para leitura dos ADCs da bateria e para selecao*/
@@ -37,13 +35,16 @@ unsigned int Inicio_Sinal, Distancia;
 
 
 
-ISR(TIMER1_CAPT_vect)  { 						//interrupção por captura do valor do TCNT1
+//volatile uint16_t conta_volta = 0;
+
+
+ISR(TIMER1_CAPT_vect)  { 						//interrupÃ§Ã£o por captura do valor do TCNT1
 
 	CPL_BIT(TCCR1B,ICES1);						//troca a borda de captura do sinal
-	if(!TST_BIT(TCCR1B,ICES1))					//lê o valor de contagem do TC1 na borda de subida do sinal
+	if(!TST_BIT(TCCR1B,ICES1))					//lÃª o valor de contagem do TC1 na borda de subida do sinal
 		Inicio_Sinal = ICR1;					//salva a primeira contagem para determinar a largura do pulso
-	else 										//lê o valor de contagem do TC1 na borda de descida do sinal
-		Distancia = ((ICR1 - Inicio_Sinal)/58);	//agora ICR1 tem o valor do TC1 na borda de descida do sinal, então calcula a distância
+	else 										//lÃª o valor de contagem do TC1 na borda de descida do sinal
+		Distancia = ((ICR1 - Inicio_Sinal)/58);	//agora ICR1 tem o valor do TC1 na borda de descida do sinal, entÃ£o calcula a distÃ¢ncia
 
 }
 
@@ -94,36 +95,80 @@ void autonomo(){
 	/* Aciona PD2, para ativar aspirador */
 	GPIO_SetBit(GPIO_D, PD2);
 
+	/* Nivel baixo para saida PD4, de nivel de bateria */
+	GPIO_ClrBit(GPIO_D, PD4);
+
+
+    unsigned int ang=0, x=2000, y=2000, voltaA_comp=0, voltaB_comp=0;
+    unsigned int limp_x[4000], limp_y[4000];		// Valor maximo para 1 vetor = 15 bits = 16.384
+
+
 	while(1){
 
 		/* Verifica sinal dos sensores TCRT5000 */
 		sensor_esq = TST_BIT(PINC,SENSOR_E);
 		sensor_dir = TST_BIT(PINC,SENSOR_D);
 
-		//pulso de disparo
-		SET_BIT(PORTB,PB1);
-		_delay_us(10);
-		CLR_BIT(PORTB,PB1);
 
-		/* Mede a distância a cada 500 ms */
+		/* Mede a distÃ¢ncia a cada 500 ms */
 		if (tempo%500 == 0) {
-			SET_BIT(PORTB,PB1);
+			SET_BIT(PORTD,PD7);						//pulso de disparo
 			_delay_us(10);
-			CLR_BIT(PORTB,PB1);
+			CLR_BIT(PORTD,PD7);
 		}
 
-		if (valor_adc > 420){			// Verifica se a tensao da bateria esta acima de 3V
-			GPIO_ClrBit(GPIO_D, PD4);	// Nivel baixo para saida PD4
-		} else {						// Verifica se a tensao da bateria esta abaixo de 3V
-			GPIO_SetBit(GPIO_D, PD4);	// Aciona saida PD4 para aviso de falta de bateria
+		if (valor_adc > 420){						// Verifica se a tensao da bateria esta acima de 3V
+			GPIO_ClrBit(GPIO_D, PD4);				// Nivel baixo para saida PD4
+
+			if( ( Distancia >= 60 ) && ( !sensor_esq ) && ( !sensor_dir ) ) {	// Verifica Distancia e Piso
+				if ( ((limp_x[x] == 0) && (limp_y[y] == 0)) | ((limp_x[x] == 3) && (limp_y[y] == 3)) ){	// Verifica se ja passou por X e Y
+						voltaA_comp = voltaA;		// Volta de comparacao A igualada a Volta A atual
+						voltaB_comp = voltaB;		// Volta de comparacao B igualada a Volta B atual
+						while ( ( voltaA < voltaA_comp+3 ) && ( voltaB < voltaB_comp+3 ) ){
+							frente(l_spd, r_spd);	// Anda para frente ate dar 3 voltas
+						}
+						para();
+						limp_x[x] = 1;				// Marca X como limpo
+						limp_y[y] = 1;				// Marca Y como limpo
+						if ( ang == 0 ){			// Incrementa ou Decrementa valor de X ou Y a depender do angulo
+							x++;
+						} else if ( ang == 1 ){
+							y++;
+						} else if ( ang == 2 ){
+							x--;
+						} else if ( ang == 3 ){
+							y--;
+						}
+				} //else if (){
+				//}
+				  else {
+					esquerda(l_spd-50, r_spd-50);	// Vira para o lado caso ja tenha passado pelo caminho
+					_delay_ms(200);
+					tempo = tempo + 200;
+					para();
+					limp_x[x]++;					// Incrementa X
+					limp_y[y]++;					// Incrementa Y
+					ang++;							// Altera ang para o angulo novo
+					if ( ang > 3 )					// Volta angulo para 0, caso complete uma volta
+						ang = 0;
+				}
+
+			} else {
+				esquerda(l_spd-50, r_spd-50);		// Vira para o lado caso o caminho esteja bloqueado
+				_delay_ms(200);
+				tempo = tempo + 200;
+				para();
+				ang++;								// Altera ang para o angulo novo
+				if ( ang > 3 )						// Volta angulo para 0, caso complete uma volta
+					ang = 0;
+			}
+
+		} else {									// Verifica se a tensao da bateria esta abaixo de 3V
+			GPIO_SetBit(GPIO_D, PD4);				// Aciona saida PD4 para aviso de falta de bateria
+			GPIO_ClrBit(GPIO_D, PD2);				// Nivel baixo em PD2, para desativar aspirador
+			para();									// Para a movimentacao
 		}
 
-		if( /*( Distancia >= 60 ) && */( !sensor_esq ) && ( !sensor_dir ) && ( voltaA != voltaA_ant )) {
-			frente(l_spd, r_spd);
-			voltaA_ant = voltaA;
-		} else {
-			para();
-		}
 
 		tempo = tempo + 50;
 		_delay_ms(50);
