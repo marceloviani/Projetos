@@ -19,16 +19,16 @@ void robo_init(){
 
 
 
-	/* Configura pinos PB4 e PB5 como entradas e PB3 e PB1 como saidas*/
-    DDRB = 0b00001010;
-    PORTB = 0b00110000;
+	/* Configura pinos PB4, PB5 e PB1 como entradas e PB3 como saida*/
+    DDRB = 0b00001000;
+    PORTB = 0b00110001;
 
-	/* Habilita Interrupcao Externa de PCINT0 até PCINT7*/
+	/* Habilita Interrupcao Externa de PCINT0 atÃ© PCINT7*/
     PCICR = 0b00000001;
 	/* Habilita Interrupcao Externa em PCINT4 (PB4) e PCINT5 (PB5)*/
     PCMSK0 = 0b00110000;
 
-	/* Habiltiação referencia do ADC em AVcc e Configura MUX para ler ADC2 (PC2) */
+	/* HabiltiaÃ§Ã£o referencia do ADC em AVcc e Configura MUX para ler ADC2 (PC2) */
 	ADCS->AD_MUX = SET(REFS0) | SET(MUX1);
 	/* Configura registrador A para ADC e Interrupcao */
 	ADCS->ADC_SRA = SET(ADEN)  |	// ADC Enable
@@ -41,24 +41,24 @@ void robo_init(){
 	ADCS->DIDr0.BITS.ADC1 = 1;
 	ADCS->DIDr0.BITS.ADC2 = 1;
 
-	/* Habilita PD4 e PD2 como saidas */
-	GPIO_D->DDR = SET(PD4) | SET(PD2);
+	/* Habilita PD7, PD4 e PD2 como saidas */
+	GPIO_D->DDR = SET(PD7) | SET(PD4) | SET(PD2);
 
-	TCCR1B = (1<<ICES1)|(1<<CS11);	//TC1 com prescaler = 8, captura na borda de subida
-	TIMSK1 = 1<<ICIE1;				//habilita a interrupção por captura
-	sei();							//habilita a chave de interrupções globais
+	TCCR1B = (1<<ICES1)|(1<<CS11);	// TC1 com prescaler = 8, captura na borda de subida
+	TIMSK1 = 1<<ICIE1;				// Habilita a interrupÃ§Ã£o por captura
+	sei();							// Habilita a chave de interrupÃ§Ãµes globais
 
-	/* PD3 (pino OC2B), PD5 (pino OC0B) e PD6 (pino OC0A) como saída */
+	/* PD3 (pino OC2B), PD5 (pino OC0B) e PD6 (pino OC0A) como saÃ­da */
 	GPIO_D->DDR |= SET(PD3) | SET(PD5) | SET(PD6);
-	/* PB3: pino OC2A como saída */
+	/* PB3: pino OC2A como saÃ­da */
 	GPIO_B->DDR |= SET(PB3);
 
-	/* WGM01 e WGM00 setados no Timer_0: modo PWM rápido com TOP em 0XFF */
+	/* WGM01 e WGM00 setados no Timer_0: modo PWM rÃ¡pido com TOP em 0XFF */
 	TIMER_0->TCCRA = SET(WGM01) | SET(WGM00);
 	/* CS00 e CS01 setados no Timer_0: prescaler = 64 */
 	TIMER_0->TCCRB = SET(CS00)  | SET(CS01);
 
-	/* WGM02, WGM01 WGM00 setados no Timer_2: modo PWM rápido com TOP em 0XFF */
+	/* WGM02, WGM01 WGM00 setados no Timer_2: modo PWM rÃ¡pido com TOP em 0XFF */
 	TIMER_2->TCCRA = SET(WGM21) | SET(WGM20);
 	/* CS22 setado no Timer_2: prescaler = 64 */
 	TIMER_2->TCCRB = SET(CS22);
