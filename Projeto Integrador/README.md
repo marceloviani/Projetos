@@ -31,17 +31,14 @@ rota de forma a passar em toda a área do local onde ele for colocado.
 A idea do projeto é montar um robô aspirador 
 
 
-  Materias | Tipo Exemplo  | Custos      |
-  -------  |-------------- | ----------- |
- Microcontrolador |                      | R$14,16
- ATMEGA328P |
+  Materias | Tipo Exemplo  
+  -------  |--------------                    
+ ATMEGA328P | Microcontrolador ATMEGA328P
  Sensor Ultrassonico  |  Smart Sensor Ultrassônico Hc-sr04
  Sensor infravermelho | Módulo Sensor de Obstáculo Infravermelho IR
  Sensor de Velocidade | Módulo Sensor de Velocidade Encoder
- Motores DC |
- Leds |
- Fonte | 
- Módulo Sensor de bluetooth 
+ Motores DC | Colocar nome?
+
  
  ## Características do Projeto:
  
@@ -67,8 +64,6 @@ Forma de Aspirar                                                        | Valor 
 Utilizar aspirador de 12V                                               | R$ 55,00    | Menor       | https://www.ifsc.edu.br/
 Fazer um aspirador a partir de um motor DC                              | R$ 20,00    | Média       | https://www.ifsc.edu.br/
 Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 30,00    | Média       | https://www.ifsc.edu.br/
-Carrinho                                                                | R$ 150,00   | Menor       | https://www.ifsc.edu.br/
-
 
 
 3 Bateria
