@@ -17,8 +17,8 @@ baixa autonomia. Já os mais avançados, começam a ter funções como poder pro
 quando a bateria estiver acabando, voltar de forma autonoma para a base de carregamento e realizar o mapeamento 
 completo do ambiente e diversas outras funções que os fabricantes projetam.
 
-Nossa proposta  é montar um protótipo de robô aspirador, que possua todas as funções básicas vistas nesses d
-ispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar quando a bateria estiver 
+Nossa proposta é montar um protótipo de robô aspirador, que possua todas as funções básicas vistas nesse tipo de
+dispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar quando a bateria estiver 
 em nível baixo e evitar quedas e batidas. E realizar algumas atividades mais avançadas, sendo a principal o 
 desenvolvimento de um software que consiga realizar um mapeamento do ambiente ou que o robô trace uma 
 rota de forma a passar o aspirador em toda a área do local onde ele for colocado.
@@ -67,6 +67,9 @@ Forma de Aspirar                                                        | Valor 
 Utilizar aspirador de 12V                                               | R$ 55,00    | Menor       | https://www.ifsc.edu.br/
 Fazer um aspirador a partir de um motor DC                              | R$ 20,00    | Média       | https://www.ifsc.edu.br/
 Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 30,00    | Média       | https://www.ifsc.edu.br/
+Carrinho                                                                | R$ 150,00   | Menor       | https://www.ifsc.edu.br/
+
+
 
 3 Bateria
 - Necessário saber tensão necessária e corrente consumida
@@ -82,6 +85,16 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 - Sensor Ultrassônico
 - Sensor infravermelho
 - Sensor de Velocidade
+
+
+## Desenvolvimento:
+
+
+
+
+
+
+
 
 ## Referência e Bibliografia:
 
