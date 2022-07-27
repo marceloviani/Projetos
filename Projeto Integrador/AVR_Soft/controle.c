@@ -90,20 +90,25 @@ void autonomo(){
 	uint8_t tempo = 0;
 
 	/* Configura variaveis de Velocidade*/
-	uint8_t l_spd=210, r_spd=210;
+	uint8_t l_spd=90, r_spd=90;
 
 	/* Aciona PD2, para ativar aspirador */
-	GPIO_SetBit(GPIO_D, PD2);
+	GPIO_SetBit(GPIO_D, PD4);
 
 	/* Nivel baixo para saida PD4, de nivel de bateria */
-	GPIO_ClrBit(GPIO_D, PD4);
+	GPIO_ClrBit(GPIO_D, PD2);
 
 
     unsigned int ang=0, x=2000, y=2000, voltaA_comp=0, voltaB_comp=0;
     unsigned int limp_x[4000], limp_y[4000];		// Valor maximo para 1 vetor = 15 bits = 16.384
 
 
+	_delay_ms(5000);
+	SET_BIT(PORTD,PD2);
+	SET_BIT(PORTD,PD4);
+
 	while(1){
+
 
 		/* Verifica sinal dos sensores TCRT5000 */
 		sensor_esq = TST_BIT(PINC,SENSOR_E);
@@ -118,18 +123,47 @@ void autonomo(){
 		}
 
 		if (valor_adc > 420){						// Verifica se a tensao da bateria esta acima de 3V
-			GPIO_ClrBit(GPIO_D, PD4);				// Nivel baixo para saida PD4
+			GPIO_ClrBit(GPIO_D, PD2);				// Nivel baixo para saida PD4
 
 			if( ( Distancia >= 60 ) && ( !sensor_esq ) && ( !sensor_dir ) ) {	// Verifica Distancia e Piso
-				if ( ((limp_x[x] == 0) && (limp_y[y] == 0)) | ((limp_x[x] == 3) && (limp_y[y] == 3)) ){	// Verifica se ja passou por X e Y
+				if ( ((limp_x[x] == 2) && (limp_y[y] == 2)) | ((limp_x[x] == 3) && (limp_y[y] == 3))  ){	// Verifica se ja passou por X e Y
+					esquerda(l_spd-20, r_spd-20);	// Vira para o lado caso ja tenha passado pelo caminho
+					_delay_ms(200);
+					tempo = tempo + 200;
+					para();
+					limp_x[x]++;					// Incrementa X
+					limp_y[y]++;					// Incrementa Y
+					ang++;							// Altera ang para o angulo novo
+					if ( ang > 3 )					// Volta angulo para 0, caso complete uma volta
+						ang = 0;
+				} else if ((limp_x[x] == 4) && (limp_y[y] == 4)){		// Caso tenha passar pelo mesmo local mais de 3 vezes, ele pode passar novamente
+					voltaA_comp = voltaA;		// Volta de comparacao A igualada a Volta A atual
+					//voltaB_comp = voltaB;		// Volta de comparacao B igualada a Volta B atual
+					while ( ( voltaA < voltaA_comp+3 ) /*&& ( voltaB < voltaB_comp+3 )*/ ){
+						frente(l_spd, r_spd);	// Anda para frente ate dar 3 voltas
+					}
+					para();
+					limp_x[x] = 2;				// Marca X como limpo
+					limp_y[y] = 2;				// Marca Y como limpo
+					if ( ang == 0 ){			// Incrementa ou Decrementa valor de X ou Y a depender do angulo
+						x++;
+					} else if ( ang == 1 ){
+						y++;
+					} else if ( ang == 2 ){
+						x--;
+					} else if ( ang == 3 ){
+						y--;
+					}
+				}
+				  else {		// Entra caso ainda nao tenha sido limpo
 						voltaA_comp = voltaA;		// Volta de comparacao A igualada a Volta A atual
-						voltaB_comp = voltaB;		// Volta de comparacao B igualada a Volta B atual
-						while ( ( voltaA < voltaA_comp+3 ) && ( voltaB < voltaB_comp+3 ) ){
+						//voltaB_comp = voltaB;		// Volta de comparacao B igualada a Volta B atual
+						while ( ( voltaA < voltaA_comp+3 ) /*&& ( voltaB < voltaB_comp+3 )*/ ){
 							frente(l_spd, r_spd);	// Anda para frente ate dar 3 voltas
 						}
 						para();
-						limp_x[x] = 1;				// Marca X como limpo
-						limp_y[y] = 1;				// Marca Y como limpo
+						limp_x[x] = 2;				// Marca X como limpo
+						limp_y[y] = 2;				// Marca Y como limpo
 						if ( ang == 0 ){			// Incrementa ou Decrementa valor de X ou Y a depender do angulo
 							x++;
 						} else if ( ang == 1 ){
@@ -139,33 +173,22 @@ void autonomo(){
 						} else if ( ang == 3 ){
 							y--;
 						}
-				} //else if (){
-				//}
-				  else {
-					esquerda(l_spd-50, r_spd-50);	// Vira para o lado caso ja tenha passado pelo caminho
-					_delay_ms(200);
-					tempo = tempo + 200;
-					para();
-					limp_x[x]++;					// Incrementa X
-					limp_y[y]++;					// Incrementa Y
-					ang++;							// Altera ang para o angulo novo
-					if ( ang > 3 )					// Volta angulo para 0, caso complete uma volta
-						ang = 0;
+
 				}
 
 			} else {
 				esquerda(l_spd-50, r_spd-50);		// Vira para o lado caso o caminho esteja bloqueado
 				_delay_ms(200);
 				tempo = tempo + 200;
-				para();
+				//para();
 				ang++;								// Altera ang para o angulo novo
 				if ( ang > 3 )						// Volta angulo para 0, caso complete uma volta
 					ang = 0;
 			}
 
 		} else {									// Verifica se a tensao da bateria esta abaixo de 3V
-			GPIO_SetBit(GPIO_D, PD4);				// Aciona saida PD4 para aviso de falta de bateria
-			GPIO_ClrBit(GPIO_D, PD2);				// Nivel baixo em PD2, para desativar aspirador
+			GPIO_SetBit(GPIO_D, PD2);				// Aciona saida PD2 para aviso de falta de bateria
+			GPIO_ClrBit(GPIO_D, PD4);				// Nivel baixo em PD4, para desativar aspirador
 			para();									// Para a movimentacao
 		}
 
