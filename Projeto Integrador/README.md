@@ -82,8 +82,8 @@ Utilizar  motores para empurrar a sujeira                               | R$ 30,
 
 ## Desenvolvimento:
 
-Foi desenvolvido todo suporte para que pudessemos colocar o aspirador no carrinho cedido pela instituição, nessa etapa foi utilizado
-a impressora 3D para produzir esse suporte. A produção da placa de circuito impresso foi realizada no ifsc utilizando software kicad, o circuito 
+Foi desenvolvido todo suporte para que pudessemos colocar o aspirador no carrinho cedido pela instituição, nessa etapa foi utilizada
+a impressora 3D para produzir esse suporte. Já a produção da placa de circuito impresso foi realizada no ifsc utilizando software kicad, o circuito 
 apresentado na figura abaixo:
 
 ![WhatsApp Image 2022-07-25 at 18 32 27](https://user-images.githubusercontent.com/49212881/181155702-2795e9e1-bb1e-406f-bac3-10c58a8a2c25.jpeg)
