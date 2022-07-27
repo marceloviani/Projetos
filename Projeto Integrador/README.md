@@ -44,7 +44,6 @@ A idea do projeto é montar um robô aspirador
  
  ![Screenshot](https://camo.githubusercontent.com/37648960f68d08493e41f3fcc5146b1b937f7c9ef2aada56c4b2bb4528fb5139/68747470733a2f2f692e6962622e636f2f796e787a3664532f494d472d32303139303632362d3135343832312e6a7067)
 
- 
         
 Necessidades:
 
@@ -85,11 +84,15 @@ Utilizar escovas e motores para empurrar a sujeira até um reservatório  | R$ 3
 ## Desenvolvimento:
 
 
- Placa de desenvolvida:
+ Placa de desenvolvida: 
+ 
+ ![Foto de Matheus](https://user-images.githubusercontent.com/49212881/181152398-ed8179f2-7202-4dd7-9a8b-27abda26b18e.jpg)
+
+![Foto de Matheus (1)](https://user-images.githubusercontent.com/49212881/181152434-42a68ec9-9845-44c8-80d9-8b70f4dac7f5.jpg)
+
  
  
- 
-Colocar fotos da placa e do robô
+## Colocar fotos da placa e do robô
 
 
 
