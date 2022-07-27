@@ -1,4 +1,4 @@
-# Robo Aspirador de Pó
+## Robo Aspirador de Pó
 
 - Instituto Federal da Santa Catarina - Câmpus Florianópolis
 - Nomes: Marcelo Viani e Matheus Rodrigues da Cunha
@@ -8,20 +8,20 @@
 
 ### INTRODUÇÃO
 
-Um dos aparelhos eletrônicos que tem sido destaque nos ultimos anos é o aspirador que limpa os locais sem a necessidade 
-de estar sendo manuseado por uma pessoa durante o seu funcionamento. Este dispositivo é conhecido como robô aspirador,
-e tem em comum em todas os modelos se movimentar em um ambiente de forma autonoma, evitar ficar preso e ter baixa altura.
+Um dos aparelhos eletrônicos que tem sido destaque nos ultimos anos é o robô aspirador, esse equipamento limpa os locais de uma residência
+sem a necessidade de estar sendo manuseado por uma pessoa durante o seu funcionamento. Este dispositivo tem em comum em todos os modelos se movimentar 
+em um ambiente de forma autonoma.
 
-A maioria de menor custo possui um sistema que anda de forma aleatória, podendo ou não realizar uma boa limpeza com uma 
+A grande  maioria desse tipo de robô possui um sistema que anda de forma aleatória, podendo ou não realizar uma boa limpeza com uma 
 baixa autonomia. Já os mais avançados, começam a ter funções como poder programar o horário de funcionamento, avisar 
 quando a bateria estiver acabando, voltar de forma autonoma para a base de carregamento e realizar o mapeamento 
-completo do ambiente e diversas outras funções que os fabricantes projetam.
+completo do ambiente.
 
 Nossa proposta é montar um protótipo de robô aspirador, que possua todas as funções básicas vistas nesse tipo de
-dispositivos, como a limpeza autônoma, a definição de horário de funcionamento, avisar quando a bateria estiver 
-em nível baixo e evitar quedas e batidas. E realizar algumas atividades mais avançadas, sendo a principal o 
+dispositivo, como a limpeza autônoma, a definição de horário de funcionamento, avisar quando a bateria estiver 
+em nível baixo, evitar quedas e possúveis batidas. Ele também irá realizar algumas atividades mais avançadas, sendo a principal, o 
 desenvolvimento de um software que consiga realizar um mapeamento do ambiente ou que o robô trace uma 
-rota de forma a passar o aspirador em toda a área do local onde ele for colocado.
+rota de forma a passar em toda a área do local onde ele for colocado.
 
 
 ### Conteudo:
@@ -90,6 +90,11 @@ Carrinho                                                                | R$ 150
 ## Desenvolvimento:
 
 
+ Placa de desenvolvida:
+ 
+ 
+ 
+Colocar fotos da placa e do robô
 
 
 
